@@ -4,6 +4,17 @@ namespace ValueTypeAndReferrenceType
 {
     class Program
     {
+        static void TestOut(out int value)
+
+        {
+            value = 0;
+            value++;
+        }
+        static void TestRef(ref int value)
+
+        {
+            value++;
+        }
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
@@ -24,6 +35,12 @@ namespace ValueTypeAndReferrenceType
             string str3;
             str3 = str2;
 
+            // Bài Tập
+            int value = 5;
+            TestOut(out value);
+            Console.WriteLine(value);
+            TestRef(ref value);
+            Console.WriteLine(value);
         }
     }
 }
